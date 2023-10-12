@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
 
 
   indivProjects = individualProjects;
-  collecProjects = collaborativeProjects;
+  collabProjects = collaborativeProjects;
   icons = iconsUrls;
 
   selectedProject = individualProjects[0];

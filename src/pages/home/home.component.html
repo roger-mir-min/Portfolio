@@ -82,7 +82,24 @@
     	<!--NASA, crearse, Activicat-->
     </section>
 
-	<!--PROJECTS-->
+	<!--INDIVIDUAL PROJECTS-->
+    <section class="projects flex">
+        <ng-container *ngFor="let project of collabProjects; let i = index">
+            <div (mouseover)="selectProject(i)" class="card">
+				<img src="" alt="">
+                <div class="info">
+					<h1>{{project.name}}</h1>
+					<p>fdsafdas</p>
+					<ng-container *ngFor="let iconUrl of project.iconsUrl">
+						<img [src]="iconUrl">
+					</ng-container>
+					<button>Botó</button>
+                </div>
+            </div>
+        </ng-container>
+    </section>
+
+	<!--COLLABORATIVE	 PROJECTS-->
     <section class="projects flex">
         <ng-container *ngFor="let project of indivProjects; let i = index">
             <div (mouseover)="selectProject(i)" class="card">
@@ -90,10 +107,14 @@
                 <div class="info">
 					<h1>{{project.name}}</h1>
 					<p>fdsafdas</p>
+					<ng-container *ngFor="let iconUrl of project.iconsUrl">
+						<img [src]="iconUrl">
+					</ng-container>
 					<button>Botó</button>
                 </div>
             </div>
         </ng-container>
     </section>
+
     <section class="about">About</section>
     <section class="contact">Contact</section>
