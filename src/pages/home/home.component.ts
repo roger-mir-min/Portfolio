@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { individualProjects, collaborativeProjects } from 'src/assets/projects';
+import { iconsUrls } from 'src/assets/projects';
 
 @Component({
   selector: 'app-home',
@@ -11,6 +12,7 @@ export class HomeComponent implements OnInit {
 
   indivProjects = individualProjects;
   collecProjects = collaborativeProjects;
+  icons = iconsUrls;
 
   selectedProject = individualProjects[0];
   selectProject(i: number) {
