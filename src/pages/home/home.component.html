@@ -139,9 +139,11 @@
                 <div class="info">
 					<h1>{{project.name}}</h1>
 					<p>{{project.description}}</p>
-					<!-- <ng-container *ngFor="let iconUrl of project.iconsUrl">
-						<img [src]="iconUrl">
-					</ng-container> -->
+					<div class="icons my-3 flex gap-3">
+						<ng-container *ngFor="let iconUrl of project.iconsUrl">
+							<img [src]="iconUrl" class="h-6">
+						</ng-container>
+					</div>
 					<a [href]="project.url" target="_blank">View project</a>
                 </div>
             </div>
@@ -153,21 +155,23 @@
 
 	<!--INDIVIDUAL PROJECTS-->
     <section class="projects p-14">
-		<h2 class="mb-5">Individual projects</h2>
+		<h2 class="mb-5">My projects</h2>
         <div class="projects-grid">
-			<ng-container *ngFor="let project of indivProjects; let i = index">
-				<div (mouseover)="selectProject(i)" class="card">
-							<img [src]="project.imgUrl" alt="">
-					<div class="info">
-								<h1>{{project.name}}</h1>
-								<p>{{project.description}}</p>
-								<!-- <ng-container *ngFor="let iconUrl of project.iconsUrl">
-									<img [src]="iconUrl">
-								</ng-container> -->
-								<a [href]="project.url" target="_blank">View project</a>
+        <ng-container *ngFor="let project of indivProjects; let i = index">
+            <div (mouseover)="selectProject(i)" class="card">
+				<img [src]="project.imgUrl" alt="">
+                <div class="info">
+					<h1>{{project.name}}</h1>
+					<p>{{project.description}}</p>
+					<div class="icons flex gap-3">
+						<ng-container *ngFor="let iconUrl of project.iconsUrl">
+							<img [src]="iconUrl" class="h-6">
+						</ng-container>
 					</div>
-				</div>
-			</ng-container>
+					<a [href]="project.url" target="_blank">View project</a>
+                </div>
+            </div>
+        </ng-container>
 		</div>
     </section>
 
