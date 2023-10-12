@@ -1,7 +1,149 @@
-<div class="container flex flex-row">
-    <section class="bg-orange-700 mt-10">Adeu!</section>
-    <section class="hardskills bg-blue-600 border rounded">Hard</section>
-    <section class="projects">Proj</section>
+
+    <!--HEADER-->
+    <section class="header">
+        <div class="header-top text-center flex justify-center">
+            <h2 class="sentence">Hi! I am a</h2>
+            <h2 class="slidingVertical">
+                <span>passionate</span>
+                <span>hardworking</span>
+                <span>ever-evolving</span>
+                <span>solution-driven</span>
+                <span>team-oriented</span>
+            </h2>
+            <h2 class="sentence-2"> Frontend developer</h2>
+            <div class="cursor-dot"></div>
+            <div class="cursor-outline"></div>
+        </div>
+        <hr class="my-12 w-20 mx-auto">
+        <p class="mx-auto text-3xl font-bold mb-6">Welcome to my portfolio.</p>
+        <p class="mx-auto">Angular-specialized, I also work with React and Wordpress, and when needed I also adapt to backend techs (NodeJS, MySQL, AWS, Firebase).</p>
+        <!--TECHS-->
+        <div class="slider my-10">
+	<div class="slide-track">
+		<div class="slide html">
+			<img src="../../assets/logos/html.png" alt="" />
+        </div>
+		<div class="slide css">
+			<img src="../../assets/logos/css.png" alt="" />
+		</div>
+		<div class="slide js">
+			<img src="../../assets/logos/javascript.png" alt=""/>
+		</div>
+		<div class="slide ng">
+			<img src="../../assets/logos/angular.png" alt="" />
+		</div>
+		<div class="slide">
+			<img src="../../assets/logos/typescript-transp.png" alt="" />
+		</div>
+		<div class="slide">
+			<img src="../../assets/logos/react.png" alt="" />
+		</div>
+		<div class="slide">
+			<img src="../../assets/logos/wordpress.png" alt="" />
+		</div>
+		<div class="slide scss">
+			<img src="../../assets/logos/sass.png" alt="" />
+		</div>
+		<div class="slide bs">
+			<img src="../../assets/logos/bootstrap.png" alt="" />
+		</div>
+		<div class="slide tw">
+			<img src="../../assets/logos/tailwind.png" alt="" />
+		</div>
+		<div class="slide ng-material">
+			<img src="../../assets/logos/ng-material.png" alt="" />
+		</div>
+		<div class="slide jasmine">
+			<img src="../../assets/logos/jasmine.png" alt="" />
+		</div>
+		<div class="slide karma">
+			<img src="../../assets/logos/karma.png" alt="" />
+		</div>
+		<div class="slide node">
+			<img src="../../assets/logos/nodejs.png" alt="" />
+		</div>
+		<div class="slide exp">
+			<img src="../../assets/logos/express-js-seeklogo.com.svg" alt="" />
+		</div>
+        <div class="slide ec2">
+			<img src="../../assets/logos/EC2.jpg" alt="" />
+		</div>
+		<div class="slide firebase">
+			<img src="../../assets/logos/firebase.png" alt="" />
+		</div>
+		<div class="slide html">
+			<img src="../../assets/logos/html.png" alt="" />
+        </div>
+		<div class="slide css">
+			<img src="../../assets/logos/css.png" alt="" />
+		</div>
+		<div class="slide js">
+			<img src="../../assets/logos/javascript.png" alt=""/>
+		</div>
+		<div class="slide scss">
+			<img src="../../assets/logos/sass.png" alt="" />
+		</div>
+		<div class="slide">
+			<img src="../../assets/logos/typescript-transp.png" alt="" />
+		</div>
+		<div class="slide ng">
+			<img src="../../assets/logos/angular.png" alt="" />
+		</div>
+		<div class="slide">
+			<img src="../../assets/logos/react.png" alt="" />
+		</div>
+		<div class="slide">
+			<img src="../../assets/logos/wordpress.png" alt="" />
+		</div>
+		<div class="slide bs">
+			<img src="../../assets/logos/bootstrap.png" alt="" />
+		</div>
+		<div class="slide tw">
+			<img src="../../assets/logos/tailwind.png" alt="" />
+		</div>
+		<div class="slide ng-material">
+			<img src="../../assets/logos/ng-material.png" alt="" />
+		</div>
+		<div class="slide jasmine">
+			<img src="../../assets/logos/jasmine.png" alt="" />
+		</div>
+		<div class="slide karma">
+			<img src="../../assets/logos/karma.png" alt="" />
+		</div>
+		<div class="slide node">
+			<img src="../../assets/logos/nodejs.png" alt="" />
+		</div>
+		<div class="slide exp">
+			<img src="../../assets/logos/express-js-seeklogo.com.svg" alt="" />
+		</div>
+        <div class="slide ec2">
+			<img src="../../assets/logos/EC2.jpg" alt="" />
+		</div>
+		<div class="slide firebase">
+			<img src="../../assets/logos/firebase.png" alt="" />
+		</div>
+	</div>
+</div>
+    </section>
+
+    <!--FEATURED-->
+    <section class="hardskills bg-blue-600 border rounded">
+        <h2>Featured</h2>
+    	<!--NASA, crearse, Activicat-->
+    </section>
+
+	<!--PROJECTS-->
+    <section class="projects flex">
+        <div class="basis-2/4">{{selectedProject.name}}</div>
+        <div class="basis-2/4">
+        <ng-container *ngFor="let project of indivProjects; let i = index">
+            <div (mouseover)="selectProject(i)">
+                <div>
+                    {{project.name}}
+                </div>
+            </div>
+        </ng-container>
+        </div>
+    </section>
     <section class="about">About</section>
     <section class="contact">Contact</section>
-</div>

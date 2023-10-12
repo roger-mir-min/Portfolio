@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+        'acumin': ['Acumin-Pro'],
+        'acumin-wide': ['Acumin-Pro-Wide']
+      },
+    },
   },
   plugins: [require("daisyui")]
 }
