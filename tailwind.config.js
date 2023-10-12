@@ -9,8 +9,10 @@ module.exports = {
         'acumin': ['Acumin-Pro'],
         'acumin-wide': ['Acumin-Pro-Wide']
       },
+      colors: {
+        'blau': "rgb(30, 64, 175)"
+      }
     },
   },
   plugins: [require("daisyui")]
 }
-

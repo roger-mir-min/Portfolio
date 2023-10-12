@@ -58,23 +58,23 @@ export const individualProjects: project[] = [
     },
     {
         name: "Crearse - Psicología y arte",
-        description: "",
+        description: "Professional website for a psychologist. She can log as admin and modify almost all the text (+text format). For that I used Kolkov Angular Editor. Chore: Angular (full standalone, service workers), Tailwind, Firebase. I applied performance, SEO and accessibility criteria.",
         url: "crearse-a80cc.firebaseapp.com/",
-        imgUrl: "../assets/iamges/crearse.png",
+        imgUrl: "../assets/images/crearse.png",
         iconsUrl: [i.angular, i.typescript, i.tailwind, i.ngKolkov]
     },
     {
         name: "El senyor de cada dia",
         description: "An app where you can create and store your own points of interest and routes in a map. Made with Leaflet and Angular: Angular Signals and Standalone Components :)",
         url: "https://roger-mir-min.github.io/elsenyorde/",
-        imgUrl: "../assets/images/elsenyorde.png",
+        imgUrl: "../assets/images/elsenyorde2.png",
         iconsUrl: [i.angular, i.typescript, i.ngBootstrap, i.leaflet]
     },
     {
         name: "Star Wars Starships",
-        description: "",
+        description: "An authentication process (localstorage) allows users to access informational cards about Star Wars movies, fetched from the APIs from https://swapi.dev/ and https://starwars-visualguide.com/#/)).",
         url: "https://roger-mir-min.github.io/ITAcademy-8-SW-Starships/",
-        imgUrl: "n authentication process (localstorage) allows users to access informational cards about Star Wars movies, fetched from the APIs from https://swapi.dev/ and https://starwars-visualguide.com/#/)).",
+        imgUrl: "../assets/images/sw.png",
         iconsUrl: [i.angular, i.typescript, i.ngBootstrap]
     },
     // {

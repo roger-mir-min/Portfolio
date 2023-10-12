@@ -71,49 +71,104 @@
 		<div class="slide firebase">
 			<img [src]="icons.firebase" alt="" />
 		</div>
+		<div class="slide html">
+			<img [src]="icons.html" alt="" />
+        </div>
+		<div class="slide css">
+			<img [src]="icons.css" alt="" />
+		</div>
+		<div class="slide js">
+			<img [src]="icons.javascript" alt=""/>
+		</div>
+		<div class="slide ng">
+			<img [src]="icons.angular" alt="" />
+		</div>
+		<div class="slide">
+			<img [src]="icons.typescript" alt="" />
+		</div>
+		<div class="slide">
+			<img [src]="icons.react" alt="" />
+		</div>
+		<div class="slide">
+			<img [src]="icons.wordpress" alt="" />
+		</div>
+		<div class="slide scss">
+			<img [src]="icons.scss" alt="" />
+		</div>
+		<div class="slide bs">
+			<img [src]="icons.bootstrap" alt="" />
+		</div>
+		<div class="slide tw">
+			<img [src]="icons.tailwind" alt="" />
+		</div>
+		<div class="slide ng-material">
+			<img [src]="icons.ngMaterial" alt="" />
+		</div>
+		<div class="slide jasmine">
+			<img [src]="icons.jasmine" alt="" />
+		</div>
+		<div class="slide karma">
+			<img [src]="icons.karma" alt="" />
+		</div>
+		<div class="slide node">
+			<img [src]="icons.node" alt="" />
+		</div>
+		<div class="slide exp">
+			<img [src]="icons.express" alt="" />
+		</div>
+        <div class="slide ec2">
+			<img [src]="icons.ec2" alt="" />
+		</div>
+		<div class="slide firebase">
+			<img [src]="icons.firebase" alt="" />
+		</div>
 		
 	</div>
 </div>
     </section>
 
-    <!--FEATURED-->
-    <section class="hardskills bg-blue-600 border rounded">
-        <h2>Featured</h2>
-    	<!--NASA, crearse, Activicat-->
-    </section>
+	<hr class="my-5 w-20 mx-auto">
 
-	<!--INDIVIDUAL PROJECTS-->
-    <section class="projects flex">
+	<!--COLLABORATIVE PROJECTS-->
+    <section class="projects p-14">
+		<h2 class="mb-5">Collaborative projects</h2>
+        <div class="projects-grid">
         <ng-container *ngFor="let project of collabProjects; let i = index">
             <div (mouseover)="selectProject(i)" class="card">
-				<img src="" alt="">
+				<img [src]="project.imgUrl" alt="">
                 <div class="info">
 					<h1>{{project.name}}</h1>
-					<p>fdsafdas</p>
-					<ng-container *ngFor="let iconUrl of project.iconsUrl">
+					<p>{{project.description}}</p>
+					<!-- <ng-container *ngFor="let iconUrl of project.iconsUrl">
 						<img [src]="iconUrl">
-					</ng-container>
-					<button>Botó</button>
+					</ng-container> -->
+					<a [href]="project.url" target="_blank">View project</a>
                 </div>
             </div>
         </ng-container>
+		</div>
     </section>
 
-	<!--COLLABORATIVE	 PROJECTS-->
-    <section class="projects flex">
-        <ng-container *ngFor="let project of indivProjects; let i = index">
-            <div (mouseover)="selectProject(i)" class="card">
-				<img src="" alt="">
-                <div class="info">
-					<h1>{{project.name}}</h1>
-					<p>fdsafdas</p>
-					<ng-container *ngFor="let iconUrl of project.iconsUrl">
-						<img [src]="iconUrl">
-					</ng-container>
-					<button>Botó</button>
-                </div>
-            </div>
-        </ng-container>
+	<hr class="my-12 w-20 mx-auto">
+
+	<!--INDIVIDUAL PROJECTS-->
+    <section class="projects p-14">
+		<h2 class="mb-5">Individual projects</h2>
+        <div class="projects-grid">
+			<ng-container *ngFor="let project of indivProjects; let i = index">
+				<div (mouseover)="selectProject(i)" class="card">
+							<img [src]="project.imgUrl" alt="">
+					<div class="info">
+								<h1>{{project.name}}</h1>
+								<p>{{project.description}}</p>
+								<!-- <ng-container *ngFor="let iconUrl of project.iconsUrl">
+									<img [src]="iconUrl">
+								</ng-container> -->
+								<a [href]="project.url" target="_blank">View project</a>
+					</div>
+				</div>
+			</ng-container>
+		</div>
     </section>
 
     <section class="about">About</section>

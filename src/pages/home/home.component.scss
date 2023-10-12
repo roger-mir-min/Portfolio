@@ -2,6 +2,11 @@
   cursor: none;
 }
 
+hr{
+    @apply border-black;
+    border-top-width: 2px;
+  }
+
 .cursor-dot{
   width: 5px;
   height: 5px;
@@ -39,12 +44,6 @@
   margin-top: 100px;
   min-height: 500px;
   padding: 50px;
-  border-bottom: 1px solid black;
-
-  & hr{
-    @apply border-black;
-    border-top-width: 2px;
-  }
 }
 
 /*Vertical Sliding*/
@@ -216,7 +215,10 @@ $animationSpeed: 20s;
 }
 
 //PROJECTS
-.projects { // hi ha versió @media
+.projects{
+}
+.projects-grid { // hi ha versió @media
+
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
     grid-auto-rows: 1fr;
@@ -224,8 +226,6 @@ $animationSpeed: 20s;
 }
 
 .card {
-  width: 280px;
-  height: 360px;
   border-radius: 15px;
   padding: 1.5rem;
   background: white;
@@ -291,7 +291,9 @@ $animationSpeed: 20s;
       margin-top: 8px;
     }
 
-    button {
+    a {
+		display: inline-block;
+	margin-top: 1rem;
       padding: 0.6rem;
       outline: none;
       border: none;
@@ -311,7 +313,7 @@ $animationSpeed: 20s;
 }
 
 @media screen and (max-width:768px) {
-    .projects {
+    .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 }
