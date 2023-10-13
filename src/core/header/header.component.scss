@@ -58,6 +58,11 @@
   transition: all 0.3s ease-in-out;
 }
 
+ul.menu.dropdown-content li
+{
+  align-items:flex-start;
+}
+
 .menu :where(li:not(.menu-title) > *:not(ul):not(details):not(.menu-title)):before{
   content: '';
   background: rgb(30, 64, 175);

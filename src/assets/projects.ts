@@ -43,7 +43,7 @@ export const collaborativeProjects: project[] = [
         name: "ITA Challenges",
         description: "Project I worked at as an internship at IT Academy (July 2023). It is a programming challenges website, aimed to be a useful tool for students at the academy. Still in progress.",
         url: "https://github.com/roger-mir-min/ita-challenges-frontend",
-        imgUrl: "../assets/images/ITA-challenges2.png",
+        imgUrl: "../assets/images/ITA-logo.jpeg",
         iconsUrl: [i.angular, i.typescript, i.ngBootstrap, i.jasmine, i.karma]
     },
 ];

@@ -55,7 +55,8 @@ hr{
 }
 
 .slidingVertical{
-  display: inline-block;
+  height: 48.588px;
+  position:relative;
 }
 .slidingVertical span{
   @apply text-center text-blue-800;
@@ -88,13 +89,9 @@ hr{
 	-webkit-animation-delay: 10s !important;
 }
 
-.header p{
-  width: 762px;
-}
-
 /*topToBottom Animation*/
 @keyframes topToBottom{
-	0% { opacity: 0; }
+	0% { opacity: 1; }
 	5% { opacity: 0; transform: translateY(-50px); }
 	10% { opacity: 1; transform: translateY(0px); }
 	25% { opacity: 1; transform: translateY(0px); }
@@ -126,7 +123,6 @@ $animationSpeed: 20s;
 	margin-left: auto;
 	overflow:hidden;
 	position: relative;
-	width: 762px;
 	
 	&::before,
 	&::after {
