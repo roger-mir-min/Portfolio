@@ -54,7 +54,7 @@ export const individualProjects: project[] = [
         description: "My main project (in progress). A website with exercises to practice Catalan. You can sign up as a student or teacher, or just practice.",
         url: "www.activicat.cat",
         imgUrl: "../assets/images/activicat.png",
-        iconsUrl: [i.angular, i.ngBootstrap, i.ngMaterial]
+        iconsUrl: [i.angular, i.ngBootstrap, i.ngMaterial, i.node, i.ec2]
     },
     {
         name: "Crearse - Psicología y arte",

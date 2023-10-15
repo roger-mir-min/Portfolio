@@ -5,35 +5,37 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a appScrollAnchor="stack">Stack</a></li>
         <li><a>Projects</a></li>
         <li>
-          <a>Individual projects</a>
+          <a appScrollAnchor="indiv-projects">Individual projects</a>
         </li>
         <li>
-          <a>Collaborative projects</a>
+          <a appScrollAnchor="collab-projects">Collaborative projects</a>
         </li>
-        <li><a>About me</a></li>
-        <li><a>Contact</a></li>
+        <li><a appScrollAnchor="about">About me</a></li>
+        <li><a appScrollAnchor="contact">Contact</a></li>
       </ul>
     </div>
     <h3>
-      <div class="shine normal-case ms-3 text-xl text-acumin-wide text-blau">Roger Miret Minard</div>
+      <a><div class="shine normal-case ms-3 text-xl 
+        text-acumin-wide text-blau">Roger Miret Minard</div></a>
     </h3>
   </div>
   <div class="navbar-end hidden lg:flex me-3">
     <ul class="menu menu-horizontal px-1 gap-5 items-stretch">
-      <li><a>Hardskills</a></li>
+      <li><a appScrollAnchor="stack">Stack</a></li>
       <li tabindex="0">
         <details #dropdown>
           <summary id="projects" class="p-0">Projects</summary>
           <ul class="p-2">
-            <li><a>Individual Projects</a></li>
-            <li><a>Collaborative Projects</a></li>
+            <li><a appScrollAnchor="indiv-projects">Individual Projects</a></li>
+            <li><a appScrollAnchor="collab-projects">Collaborative Projects</a></li>
           </ul>
         </details>
       </li>
-      <li><a>About</a></li>
-      <li><a>Contact</a></li>
+      <li><a appScrollAnchor="about">About</a></li>
+      <li><a appScrollAnchor="contact">Contact</a></li>
     </ul>
   </div>
 </div>
