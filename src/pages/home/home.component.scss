@@ -41,7 +41,7 @@ hr{
 }
 
 .header{
-  margin-top: 100px;
+  margin-top: 70.548px; //altura del header
   min-height: 500px;
 }
 
@@ -202,6 +202,10 @@ $animationSpeed: 20s;
 	&.scss, &.tw{
 		margin: 0px 10px;
 	}
+
+  &.leaflet, &.ng-bs, &.kolkov{
+    display:none;
+  }
 
     & img{
       height:80px;

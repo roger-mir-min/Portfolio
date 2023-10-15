@@ -1,24 +1,24 @@
 export const iconsUrls = {
-    html: "../../assets/logos/html.png",
-    css: "../../assets/logos/css.png",
-    scss: "../../assets/logos/sass.png",
-    javascript: "../../assets/logos/javascript.png",
-    typescript: "../../assets/logos/typescript-transp.png",
-    angular: "../../assets/logos/angular.png",
-    react: "../../assets/logos/react.png",
-    wordpress: "../../assets/logos/wordpress.png",
-    tailwind: "../../assets/logos/tailwind.png",
-    bootstrap: "../../assets/logos/bootstrap.png",
-    ngBootstrap: "../../assets/logos/ng-bootstrap.png",
-    ngMaterial: "../../assets/logos/ng-material.png",
-    ngKolkov: "../../assets/logos/ng-kolkov.png",
-    leaflet: "../../assets/logos/leaflet.svg",
-    karma: "../../assets/logos/karma.png",
-    jasmine: "../../assets/logos/jasmine.png",
-    node: "../../assets/logos/nodejs.png",
-    express: "../../assets/logos/express-js-seeklogo.com.svg",
-    ec2: "../../assets/logos/EC2.jpg",
-    firebase: "../../assets/logos/firebase.png"
+    html: { iconUrl: "../../assets/logos/html.png", class:"html"},
+    css: {iconUrl: "../../assets/logos/css.png", class:"css"},
+    scss: {iconUrl: "../../assets/logos/sass.png", class:"scss"},
+    javascript: { iconUrl: "../../assets/logos/javascript.png", class:"js" },
+    typescript: { iconUrl: "../../assets/logos/typescript-transp.png", class:"ts" },
+    angular: { iconUrl: "../../assets/logos/angular.png", class:"ng" },
+        react: { iconUrl: "../../assets/logos/react.png", class:"html" },
+    wordpress: { iconUrl: "../../assets/logos/wordpress.png", class:"html" },
+    tailwind: { iconUrl: "../../assets/logos/tailwind.png", class:"tw" },
+    bootstrap: { iconUrl: "../../assets/logos/bootstrap.png", class:"bs" },
+    ngBootstrap: { iconUrl: "../../assets/logos/ng-bootstrap.png", class:"ng-bs" },
+    ngMaterial: { iconUrl: "../../assets/logos/ng-material.png", class:"ng-material" },
+    ngKolkov: { iconUrl: "../../assets/logos/ng-kolkov.png", class:"kolkov" },
+    leaflet: { iconUrl: "../../assets/logos/leaflet.svg", class:"leaflet" },
+    karma: {iconUrl: "../../assets/logos/karma.png", class:"karma" },
+    jasmine: { iconUrl: "../../assets/logos/jasmine.png", class:"jasmine" },
+    node: { iconUrl: "../../assets/logos/nodejs.png", class:"node"},
+    express: { iconUrl: "../../assets/logos/express-js-seeklogo.com.svg", class:"exp"},
+    ec2: { iconUrl: "../../assets/logos/EC2.jpg", class:"ec2" },
+    firebase: {iconUrl: "../../assets/logos/firebase.png", class:"firebase"}
 }
 
 const i = iconsUrls;
@@ -37,14 +37,14 @@ export const collaborativeProjects: project[] = [
         description: "Winning project of the NASA SpaceApps Challenge 2023 (Barcelona Event), built by my team Galactic Space Coders. It's a game that aims to raise awareness among children about the importance of taking care of the oceans.",
         url: "https://github.com/roger-mir-min/NasaSpaceAppsChallengeOceanGardens",
         imgUrl: "../assets/images/nasa-challenge.png",
-        iconsUrl: [i.angular, i.typescript, i.ngMaterial, i.tailwind, i.scss]
+        iconsUrl: [i.angular.iconUrl, i.typescript.iconUrl, i.ngMaterial.iconUrl, i.tailwind.iconUrl, i.scss.iconUrl]
     },
     {
         name: "ITA Challenges",
         description: "Project I worked at as an internship at IT Academy (July 2023). It is a programming challenges website, aimed to be a useful tool for students at the academy. Still in progress.",
         url: "https://github.com/roger-mir-min/ita-challenges-frontend",
         imgUrl: "../assets/images/ITA-logo.jpeg",
-        iconsUrl: [i.angular, i.typescript, i.ngBootstrap, i.jasmine, i.karma]
+        iconsUrl: [i.angular.iconUrl, i.typescript.iconUrl, i.ngBootstrap.iconUrl, i.jasmine.iconUrl, i.karma.iconUrl]
     },
 ];
 
@@ -54,28 +54,28 @@ export const individualProjects: project[] = [
         description: "My main project (in progress). A website with exercises to practice Catalan. You can sign up as a student or teacher, or just practice.",
         url: "www.activicat.cat",
         imgUrl: "../assets/images/activicat.png",
-        iconsUrl: [i.angular, i.ngBootstrap, i.ngMaterial, i.node, i.ec2]
+        iconsUrl: [i.angular.iconUrl, i.ngBootstrap.iconUrl, i.ngMaterial.iconUrl, i.node.iconUrl, i.ec2.iconUrl]
     },
     {
         name: "Crearse - Psicología y arte",
         description: "Professional website for a psychologist. She can log as admin and modify almost all the text (+text format). For that I used Kolkov Angular Editor. Chore: Angular (full standalone, service workers), Tailwind, Firebase. I applied performance, SEO and accessibility criteria.",
         url: "crearse-a80cc.firebaseapp.com/",
         imgUrl: "../assets/images/crearse.png",
-        iconsUrl: [i.angular, i.typescript, i.tailwind, i.ngKolkov]
+        iconsUrl: [i.angular.iconUrl, i.typescript.iconUrl, i.tailwind.iconUrl, i.ngKolkov.iconUrl]
     },
     {
         name: "El senyor de cada dia",
         description: "An app where you can create and store your own points of interest and routes in a map. Made with Leaflet and Angular: Angular Signals and Standalone Components :)",
         url: "https://roger-mir-min.github.io/elsenyorde/",
         imgUrl: "../assets/images/elsenyorde2.png",
-        iconsUrl: [i.angular, i.typescript, i.ngBootstrap, i.leaflet]
+        iconsUrl: [i.angular.iconUrl, i.typescript.iconUrl, i.ngBootstrap.iconUrl, i.leaflet.iconUrl]
     },
     {
         name: "Star Wars Starships",
         description: "An authentication process (localstorage) allows users to access informational cards about Star Wars movies, fetched from the APIs from https://swapi.dev/ and https://starwars-visualguide.com/#/)).",
         url: "https://roger-mir-min.github.io/ITAcademy-8-SW-Starships/",
         imgUrl: "../assets/images/sw.png",
-        iconsUrl: [i.angular, i.typescript, i.ngBootstrap]
+        iconsUrl: [i.angular.iconUrl, i.typescript.iconUrl, i.ngBootstrap.iconUrl]
     },
     // {
     //     name: "Aventourer",

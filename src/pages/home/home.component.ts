@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
 
   indivProjects = individualProjects;
   collabProjects = collaborativeProjects;
-  icons = iconsUrls;
+  icons = Object.values(iconsUrls);
 
   selectedProject = individualProjects[0];
   selectProject(i: number) {
