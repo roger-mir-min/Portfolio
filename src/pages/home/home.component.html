@@ -2,7 +2,7 @@
     <!--HEADER-->
     <section appScrollSection="header" class="header p-6 md:p-12">
         <div class="header-top text-center flex flex-col lg:flex-row justify-center">
-            <h2 class="">Hi! I am a</h2>
+            <h1 class="text-bold">Hi! I am a</h1>
             <h2 class="slidingVertical flex w-full lg:w-64 flex-row items-center justify-center">
                 <span>passionate</span>
                 <span>hardworking</span>
@@ -11,16 +11,39 @@
                 <span>team-oriented</span>
             </h2>
             <h2 class=""> Frontend developer</h2>
-            <div class="cursor-dot"></div>
-            <div class="cursor-outline"></div>
+            <div class="cursor-dot" [ngClass]="{downloadHover: downloadCvLinkIsHovered,
+				openHover: openCvLinkIsHovered, contactHover: contactLinkIsHovered, cardButtonHover: cardButtonIsHovered}"></div>
+            <div class="cursor-outline" [ngClass]="{downloadHover: downloadCvLinkIsHovered, 
+				openHover: openCvLinkIsHovered, contactHover: contactLinkIsHovered, cardButtonHover: cardButtonIsHovered}"></div>
         </div>
 
-        <hr class="my-6 my-12 w-20 mx-auto">
+        <hr class="my-6 mt-12 mb-20 w-20 mx-auto">
 
-        <p appScrollSection="stack" class="mx-auto text-3xl font-bold mb-6 w-5/6 md:w-3/6">Welcome to my portfolio.</p>
-        <p class="mx-auto w-5/6 md:w-3/6">Angular-specialized, I also work with React and Wordpress, and when needed I also adapt to backend techs (NodeJS, MySQL, AWS, Firebase).</p>
+		<div class="mx-auto w-5/6 md:w-3/6 text-center">
+			<p appScrollSection="stack" class="text-3xl font-bold mb-6">Welcome to my portfolio</p>
+			<p class="text-justify mb-6">I am a Frontend developer dedicated to crafting the ideal 
+				website for your needs. My designs are clean and visually appealing, with a strong focus on 
+				user experience. I prioritize performance, SEO and accessibility to ensure 
+				your website reaches its full potential. If you're seeking a straightforward website, I can 
+				handle both the backend and deployment processes. I bring experience with WordPress, Firebase,
+				NodeJS, MySQL and AWS.
+			</p>
+			<p class="text-justify">
+				If you wish to learn more about me, you can 
+				<a [href]="cvSrc" download="CV-EN-roger-mir-min.pdf" 
+				(mouseover)="hoverCvLink('downloadCv')" (mouseleave)="hoverCvLink('downloadCv')">
+					download my CV
+				</a>
+				(or just 
+				<a (click)="openCvModal()" (mouseover)="hoverCvLink('openCv')" 
+					(mouseleave)="hoverCvLink('openCv')">
+					open it
+				</a>)
+				and keep scrolling!
+			</p>
+		</div>
         
-		<!--TECHS-->
+		<!--STACK-->
         <div class="slider my-10 w-5/6 md:w-3/6">
 			<div class="slide-track">
 				<ng-container *ngFor="let icon of icons">
@@ -54,7 +77,8 @@
 							<img [src]="iconUrl" class="h-6">
 						</ng-container>
 					</div>
-					<a [href]="project.url" target="_blank">View project</a>
+					<a [href]="project.url" target="_blank" (mouseover)="hoverCvLink('card-button')" 
+					(mouseleave)="hoverCvLink('card-button')">View project</a>
                 </div>
             </div>
         </ng-container>
@@ -78,15 +102,37 @@
 							<img [src]="iconUrl" class="h-6">
 						</ng-container>
 					</div>
-					<a [href]="project.url" target="_blank">View project</a>
+					<a [href]="project.url" target="_blank" (mouseover)="hoverCvLink('card-button')" 
+					(mouseleave)="hoverCvLink('card-button')">View project</a>
                 </div>
             </div>
         </ng-container>
 		</div>
     </section>
 
-    <section appScrollSection="about" class="about">About</section>
-    <section appScrollSection="contact" class="contact">
-		<h2>Contact</h2>
-		<!--email, linkedin, github, telèfon-->
+    <!-- <section appScrollSection="about" class="about">About</section> -->
+	<!--CONTACT SECTION-->
+    <section appScrollSection="contact" class="contact p-14">
+		<h2 class="mb-6">Contact</h2>
+		<div class="flex flex-column md:flex-row">
+			<div class="basis-1/3 text-center">
+				<img src="../../assets/icons/envelope-at.svg" class="w-9 mx-auto mb-5">
+				<a href="mailto:r.mir.min@gmail.com" (mouseover)="hoverCvLink('contact')" 
+				(mouseleave)="hoverCvLink('contact')">r.mir.min@gmail.com</a>
+			</div>
+			<div class="basis-1/3 text-center linkedin-icon">
+				<img src="../../assets/icons/linkedin.svg" class="w-9 mx-auto mb-5">
+				<a href="https://www.linkedin.com/in/roger-mir-min/" target="_blank" 
+				(mouseover)="hoverCvLink('contact')" (mouseleave)="hoverCvLink('contact')">https://www.linkedin.com/in/roger-mir-min/</a>
+			</div>
+			<div class="basis-1/3 text-center">
+				<img src="../../assets/icons/github.svg" class="w-9 mx-auto mb-5">
+				<a target="_blank" href="https://github.com/roger-mir-min" 
+				(mouseover)="hoverCvLink('contact')" (mouseleave)="hoverCvLink('contact')">https://github.com/roger-mir-min</a>
+			</div>
+		</div>
+
+		<!--email, linkedin, github-->
 	</section>
+
+	<app-modal></app-modal>

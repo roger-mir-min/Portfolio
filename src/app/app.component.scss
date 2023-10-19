@@ -1,6 +1,13 @@
 :host{
-    display: block;
+    display:block;
+}
+
+div{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+app-footer{
+    margin-top:auto;
 }

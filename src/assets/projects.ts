@@ -5,8 +5,8 @@ export const iconsUrls = {
     javascript: { iconUrl: "../../assets/logos/javascript.png", class:"js" },
     typescript: { iconUrl: "../../assets/logos/typescript-transp.png", class:"ts" },
     angular: { iconUrl: "../../assets/logos/angular.png", class:"ng" },
-        react: { iconUrl: "../../assets/logos/react.png", class:"html" },
-    wordpress: { iconUrl: "../../assets/logos/wordpress.png", class:"html" },
+    react: { iconUrl: "../../assets/logos/react.png", class:"react" },
+    wordpress: { iconUrl: "../../assets/logos/wordpress.png", class:"wordpress" },
     tailwind: { iconUrl: "../../assets/logos/tailwind.png", class:"tw" },
     bootstrap: { iconUrl: "../../assets/logos/bootstrap.png", class:"bs" },
     ngBootstrap: { iconUrl: "../../assets/logos/ng-bootstrap.png", class:"ng-bs" },
@@ -16,8 +16,12 @@ export const iconsUrls = {
     karma: {iconUrl: "../../assets/logos/karma.png", class:"karma" },
     jasmine: { iconUrl: "../../assets/logos/jasmine.png", class:"jasmine" },
     node: { iconUrl: "../../assets/logos/nodejs.png", class:"node"},
+    nodeSvg: { iconUrl: "../../assets/logos/nodejs-horizontal.svg", class:"node-svg"},
     express: { iconUrl: "../../assets/logos/express-js-seeklogo.com.svg", class:"exp"},
-    ec2: { iconUrl: "../../assets/logos/EC2.jpg", class:"ec2" },
+    ec2: { iconUrl: "../../assets/logos/ec2.png", class: "ng-bs" },
+    ec2Horizontal: { iconUrl: "../../assets/logos/EC2.jpg", class: "ng-bs" },
+    aws: {iconUrl: "../../assets/logos/AWS.png", class:"aws"},
+    mysql: {iconUrl: "../../assets/logos/mysql.png", class: "mysql"},
     firebase: {iconUrl: "../../assets/logos/firebase.png", class:"firebase"}
 }
 
@@ -44,7 +48,7 @@ export const collaborativeProjects: project[] = [
         description: "Project I worked at as an internship at IT Academy (July 2023). It is a programming challenges website, aimed to be a useful tool for students at the academy. Still in progress.",
         url: "https://github.com/roger-mir-min/ita-challenges-frontend",
         imgUrl: "../assets/images/ITA-logo.jpeg",
-        iconsUrl: [i.angular.iconUrl, i.typescript.iconUrl, i.ngBootstrap.iconUrl, i.jasmine.iconUrl, i.karma.iconUrl]
+        iconsUrl: [i.angular.iconUrl, i.typescript.iconUrl, i.ngBootstrap.iconUrl, i.jasmine.iconUrl, i.karma.iconUrl, i.mysql.iconUrl]
     },
 ];
 
@@ -54,7 +58,7 @@ export const individualProjects: project[] = [
         description: "My main project (in progress). A website with exercises to practice Catalan. You can sign up as a student or teacher, or just practice.",
         url: "www.activicat.cat",
         imgUrl: "../assets/images/activicat.png",
-        iconsUrl: [i.angular.iconUrl, i.ngBootstrap.iconUrl, i.ngMaterial.iconUrl, i.node.iconUrl, i.ec2.iconUrl]
+        iconsUrl: [i.angular.iconUrl, i.ngBootstrap.iconUrl, i.ngMaterial.iconUrl, i.nodeSvg.iconUrl, i.aws.iconUrl, i.mysql.iconUrl]
     },
     {
         name: "Crearse - Psicología y arte",

@@ -22,6 +22,10 @@ html, body{
     cursor: none;
 }
 
+body.cv-modal-open{
+    position:relative;
+}
+
 h1, h2, h3{
     font-family: "Acumin-Pro-Wide";
     font-size: 32.392px !important;

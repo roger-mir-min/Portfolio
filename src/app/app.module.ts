@@ -9,12 +9,15 @@ import { HomeComponent } from 'src/pages/home/home.component';
 import { ScrollAnchorDirective } from 'src/shared/directives/scroll-anchor.directive';
 import { ScrollManagerDirective } from 'src/shared/directives/scroll-manager.directive';
 import { ScrollSectionDirective } from 'src/shared/directives/scroll-section.directive';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ModalComponent } from 'src/shared/components/modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    ModalComponent,
     HomeComponent,
     ScrollAnchorDirective,
     ScrollManagerDirective,
@@ -22,7 +25,8 @@ import { ScrollSectionDirective } from 'src/shared/directives/scroll-section.dir
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

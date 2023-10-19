@@ -1,0 +1,11 @@
+<div class="cv-modal">
+    <div class="relative cv-modal-body rounded shadow-md">
+				  <pdf-viewer [src]="cvSrc"
+              [render-text]="true"
+              [original-size]="false"
+              style="width: 960px; height: 1200px"
+              class="mx-auto"
+  ></pdf-viewer>
+        <img class="absolute top-3 right-3 hover:scale-125 cursor-pointer" (click)="close()" src="../../../../assets/icons/icon-cross.png" alt="cross-icon">
+    </div>
+</div>
