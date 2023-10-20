@@ -1,7 +1,8 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { individualProjects, collaborativeProjects } from 'src/assets/projects';
-import { iconsUrls } from 'src/assets/projects';
+import { iconsUrls } from 'src/assets/icons-urls';
 import { ModalComponent } from 'src/shared/components/modal/modal.component';
+import AOS from 'aos';
 
 type hoveredElement = 'downloadCv' | 'openCv' | 'contact' | 'card-button';
 
@@ -17,20 +18,19 @@ export class HomeComponent implements OnInit {
   collabProjects = collaborativeProjects;
   icons = Object.values(iconsUrls);
   cvSrc = '../../assets/docs/CV-EN-roger-mir-min.pdf';
+
   downloadCvLinkIsHovered = false;
   openCvLinkIsHovered = false;
   contactLinkIsHovered = false;
   cardButtonIsHovered = false;
 
-  selectedProject = individualProjects[0];
-
-  selectProject(i: number) {
-    this.selectedProject = this.indivProjects[i];
-  }
-
   constructor(private elRef: ElementRef) { }
 
   ngOnInit() {
+    //AOS
+    AOS.init();
+    window.addEventListener('load', AOS.refresh);
+
     //CUSTOM CURSOR
     const cursorDotElement = this.elRef.nativeElement.querySelector('.cursor-dot');
     const cursorOutlineElement = this.elRef.nativeElement.querySelector('.cursor-outline');
@@ -64,9 +64,21 @@ export class HomeComponent implements OnInit {
     }
   }
 
-    openCvModal() {
+  openCvModal() {
     this.modal.open();
   }
 
+  aosDelay(i: number) {
+    const actualIndex = i + 1;
+      if (actualIndex%3 == 0) {
+        return 300 + 450 * (actualIndex/3 - 1);
+      }
+      else if (actualIndex % 2 == 0) { 
+        return 150 + 450 * (actualIndex/2 - 1);
+    }
+      else  { 
+        return 450 * (actualIndex - 1);
+    }
+  }
 
 }
